@@ -101,7 +101,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="main_nav collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul style="padding-left: 10px" class="nav navbar-nav menu-left menu">
-                    <li><a href="{{ url('/') }}">Utama</a></li>
+                    <li><a href="{{ url('/') }}">Utama1</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle m_drop_down" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info Korporat</a>
                         <ul class="dropdown-menu">
