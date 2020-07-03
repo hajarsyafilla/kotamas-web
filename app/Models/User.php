@@ -1,0 +1,46 @@
+<?php
+
+namespace Model;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Helper;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    public function user_group() {
+        return $this->belongsTo(UserGroup::class);
+    }
+
+    /**
+     * Mutators
+     *
+     * @return String
+     */
+
+    public function getGravatarAttribute()
+    {
+        return Helper\Gravatar::get($this->email);
+    }
+}

@@ -1,0 +1,334 @@
+/*=============== service_area_three css ===============*/
+.service_area_three{
+    .row{
+        display: flex;
+    }
+}
+.sidebar_title{
+    font: 700 24px/24px "Raleway", sans-serif;
+    letter-spacing: 1px;
+    color: #282828;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #505cfe;
+    margin-bottom: 40px;
+}
+.sr_sidebar{
+    
+}
+.sr_sidebar_tab{
+    .single-services-menu{
+        background: #f7f7f7;
+        overflow: hidden;
+        border: 0px;
+        li{
+            float: none;
+            display: block;
+            border-bottom: 1px solid #e8e8e8;
+            margin: 0px;
+            a{
+                display: block;
+                font: 500 14px/40px "Raleway", sans-serif;
+                letter-spacing: 0.5px;
+                color: #888;
+                padding: 10px 20px;
+                border-radius: 0px;
+                position: relative;
+                border: 0px;
+                border-left: 2px solid transparent;
+                margin: 0px;
+                z-index: 1;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background:#505cfe;
+                    opacity: 1;
+                    transform: translate3d(-101%, 0px, 1px);
+                    -webkit-transform-origin: 50% 50%;
+                    -ms-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+                    transition: all 0.3s linear;
+                    z-index: -1;
+                }
+            }
+            &:hover{
+                a{
+                    border-color: #505cfe;
+                    color: #fff;
+                    &:before{
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+            &.active{
+                a{
+                    border: 0px;
+                    border-radius: 0px;
+                    background: none;
+                    border-left: 2px solid #505cfe;
+                    font-weight: 600;
+                }
+            }
+            &:last-child{
+                border-bottom: 0px;
+            }
+        }
+    }
+}
+.tab_service_content{
+    padding-left: 30px;
+    .content{
+        vertical-align: middle;
+        h2{
+            font: 600 24px/28px "Raleway", sans-serif;
+            color: #282828;
+            padding-bottom: 20px;
+        }
+        p{
+            font: 400 16px/30px "Open Sans", sans-serif;
+            color: #282828;
+        }
+    }
+    .service_tab_slider{
+        display: flex;
+    }
+    .key-features{
+        margin-top: 60px;
+        .content{
+            padding-left: 20px;
+        }
+    }
+}
+.timeline{
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    &:after{
+        content: "";
+        width: 2px;
+        height: 100%;
+        border: 1px dashed #ededed;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .timeline_item{
+        display: flex;
+        margin-bottom: 50px;
+        .timeline_item_posts{
+            width: 43%;
+            background: #f7f7f7;
+            padding: 30px;
+            position: relative;
+            margin-top: 10px;
+            h3{
+                font: 600 22px/32px "Raleway", sans-serif;
+                color: #282828;
+                padding-bottom: 15px;
+            }
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: -40px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 25px 40px 0 0;
+                border-color: #f7f7f7 transparent transparent transparent;
+            }
+        }
+        .timeline_icon{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(80 , 92, 254, 0.6);
+            position: relative;
+            margin: 0 44px;
+            span{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background:#505cfe;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .timeline_date{
+            .month{
+                font: 500 16px/25px "Open Sans", sans-serif;
+                display: block;
+                text-transform: uppercase;
+            }
+            .year{
+                font: 600 34px/38px "Raleway", sans-serif;
+            }
+        }
+        &:nth-child(even){
+            flex-direction: row-reverse;
+            .timeline_item_posts{
+                &:after{
+                    right: auto;
+                    left: -40px;
+                    border-width:0 40px 25px 0;
+                    border-color: transparent #f7f7f7 transparent transparent;
+                }
+            }
+            .timeline_icon{
+                
+            }
+        }
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.sidebar_testimonial{
+    margin-top: 60px;
+    .sidebar_slider{
+        .item{
+            font: 500 16px/25px "Open Sans", sans-serif;
+            color: #282828;
+            a{
+                display: block;
+                color: #1a264a;
+                &:hover{
+                    color: #505cfe;
+                }
+            }
+            span{
+                color: #555555;
+                display: block;
+                padding-top: 8px;
+                i{
+                    color: #9c9c9c;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+.sidebar_boucher{
+    margin-top: 60px;
+    .dload{
+        a{
+            display: block;
+            font: 600 18px/33px "Raleway", sans-serif;
+            color: #fff;
+            letter-spacing: 0.36px;
+            background: #2d2b34;
+            padding: 10px 30px;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background:#505cfe;
+                opacity: 1;
+                transform: translate3d(-101%, 0px, 1px);
+                -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+                transition: all 0.3s linear;
+                z-index: -1;
+            }
+            i{
+                padding-right: 8px;
+            }
+            &:hover{
+                &:before{
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+}
+
+.white-bg{
+    background: #fff;
+}
+
+
+.lt_title{
+    margin-bottom: 70px;
+    .a_title{
+        display: inline-block;
+        padding: 0px;
+    }
+    .link-arrow{
+        font-size: 16px;
+        line-height: 47px;
+        color: #000;
+        i{
+            padding-left: 5px;
+        }
+        &:hover{
+            color: #cee002;
+        }
+    }
+}
+
+.section_title_four{
+    margin-bottom: 70px;
+    .vertical_line{
+        width: 2px;
+        height: 50px;
+        background: #4f40ff;
+        margin: 0 auto;
+    }
+    .shadow_text{
+        font-size: 100px;
+        font-weight: 800;
+        color: #f5f5f5;
+    }
+    h2{
+        font-size: 38px;
+        color: #212127;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 28px;
+        color: #9096a4;
+        margin-bottom: 0px;
+    }
+}
+
+.service_area{
+    padding: 100px 0px 20px;
+    .service_item{
+        text-align: center;
+        margin-bottom: 70px;
+        img{
+            width: 80px;
+            max-width: 100%;
+        }
+        h4{
+            margin: 30px 0px 18px;
+            font: 600 22px/26px "Poppins", sans-serif;
+            color: #282828;
+        }
+        p{
+            margin-bottom: 0px;
+            color: #8d8d8d;
+        }
+    }
+}
